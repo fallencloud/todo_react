@@ -4,7 +4,6 @@ class ToDo extends Component {
   render() {
     return (
       <div>
-        <h2>To Do</h2>
         <ul>
           <li>Go To Dentist</li>
           <li>Do Gardening</li>

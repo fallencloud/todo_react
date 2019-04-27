@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 # React To Do List
 
 A simple to do list made with React.
@@ -8,3 +6,4 @@ A simple to do list made with React.
 
 1. Create application skeleton with create-react-app.
 2. Create ToDo Component skeleton
+3. Create Header Component skeleton
