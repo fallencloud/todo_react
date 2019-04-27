@@ -8,8 +8,12 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Header />
-        <ToDo />
+        <Header branding='To Do List' />
+        <ul>
+          <ToDo task='Go To Dentist' />
+          <ToDo task='Do Gardening' />
+          <ToDo task='Renew Library Account' />
+        </ul>
       </div>
     );
   }

@@ -7,3 +7,4 @@ A simple to do list made with React.
 1. Create application skeleton with create-react-app.
 2. Create ToDo Component skeleton
 3. Create Header Component skeleton
+4. Pass data to components as props
