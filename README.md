@@ -8,3 +8,4 @@ A simple to do list made with React.
 2. Create ToDo Component skeleton
 3. Create Header Component skeleton
 4. Pass data to components as props
+5. Add default props and prop types

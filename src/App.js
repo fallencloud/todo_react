@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Header branding='To Do List' />
+        <Header branding='To Do App' />
         <ul>
           <ToDo task='Go To Dentist' />
           <ToDo task='Do Gardening' />

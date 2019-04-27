@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class ToDo extends Component {
   render() {
@@ -6,5 +7,9 @@ class ToDo extends Component {
     return <li>{task}</li>;
   }
 }
+
+ToDo.propTypes = {
+  task: PropTypes.string.isRequired
+};
 
 export default ToDo;
