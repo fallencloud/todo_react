@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import ToDo from './components/ToDo';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 class App extends Component {
