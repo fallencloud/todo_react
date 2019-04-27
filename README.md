@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 A simple to do list made with React.
 
-##To Do
+## To Do
 
 1. Create application skeleton with create-react-app.
+2. Create ToDo Component skeleton
