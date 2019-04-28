@@ -10,3 +10,5 @@ A simple to do list made with React.
 4. Pass data to components as props
 5. Add default props and prop types
 6. Add Bootstrap to project
+7. Fix Bootstrap
+8. Add state

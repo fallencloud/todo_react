@@ -3,23 +3,25 @@ import PropTypes from 'prop-types';
 
 class ToDo extends Component {
   render() {
-    const { task } = this.props;
+    const { desc, isComplete } = this.props.task;
     return (
       <li className='list-group-item checkbox'>
         <div className='row'>
-          <div className='col-1 checkbox'>
+          <div className='col-md-1 col-xs-1 col-lg-1 col-sm-1 checkbox'>
             <label>
-              <input id='toggleTaskStatus' type='checkbox' />
+              <input type='checkbox' value='' />
             </label>
           </div>
-          <div className='col-10 task-text '>{task}</div>
-          <div className='col-1 delete-icon-area'>
+          <div
+            className={`col-md-10 col-xs-10 col-lg-10 col-sm-10 task-text ${
+              isComplete ? 'complete' : null
+            }`}
+          >
+            {desc}
+          </div>
+          <div className='col-md-1 col-xs-1 col-lg-1 col-sm-1 delete-icon-area'>
             <a className='' href='/'>
-              <i
-                id='deleteTask'
-                data-id='0'
-                className='delete-icon glyphicon glyphicon-trash'
-              />
+              <i className='delete-icon glyphicon glyphicon-trash' />
             </a>
           </div>
         </div>
@@ -29,7 +31,7 @@ class ToDo extends Component {
 }
 
 ToDo.propTypes = {
-  task: PropTypes.string.isRequired
+  task: PropTypes.object.isRequired
 };
 
 export default ToDo;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Header = props => {
+const Nav = props => {
   const { branding } = props;
   return (
     <nav className='navbar navbar-inverse navbar-fixed-top'>
@@ -16,12 +16,12 @@ const Header = props => {
   );
 };
 
-Header.defaultProps = {
+Nav.defaultProps = {
   branding: 'My App'
 };
 
-Header.propTypes = {
+Nav.propTypes = {
   branding: PropTypes.string.isRequired
 };
 
-export default Header;
+export default Nav;

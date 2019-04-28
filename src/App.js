@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
-import ToDo from './components/ToDo';
+import Nav from './components/Nav';
+import Tasks from './components/Tasks';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -9,12 +9,15 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Header branding='To Do App' />
-        <ul>
-          <ToDo task='Go To Dentist' />
-          <ToDo task='Do Gardening' />
-          <ToDo task='Renew Library Account' />
-        </ul>
+        <Nav branding='To Do App' />
+        <div className='container'>
+          <div className='content-area row' />
+          <div className='col-8'>
+            <ul>
+              <Tasks />
+            </ul>
+          </div>
+        </div>
       </div>
     );
   }
