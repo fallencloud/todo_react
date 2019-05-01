@@ -4,9 +4,9 @@ import ToDo from './ToDo';
 class Tasks extends Component {
   state = {
     tasks: [
-      { id: 1, desc: 'Go To Dentist', isComplete: true },
-      { id: 2, desc: 'Do Gardening', isComplete: false },
-      { id: 3, desc: 'Renew Library Account', isComplete: false }
+      { id: 1, desc: 'Go To Dentist' },
+      { id: 2, desc: 'Do Gardening' },
+      { id: 3, desc: 'Renew Library Account' }
     ]
   };
 

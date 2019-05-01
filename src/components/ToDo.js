@@ -2,18 +2,28 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class ToDo extends Component {
+  state = {
+    isComplete: false
+  };
   onDeleteClick = () => {
     this.props.deleteTaskHandler();
   };
 
   render() {
-    const { desc, isComplete } = this.props.task;
+    const { desc } = this.props.task;
+    const { isComplete } = this.state;
     return (
       <li className='list-group-item checkbox'>
         <div className='row'>
           <div className='col-md-1 col-xs-1 col-lg-1 col-sm-1 checkbox'>
             <label>
-              <input type='checkbox' value='' />
+              <input
+                type='checkbox'
+                value=''
+                onClick={() => {
+                  this.setState({ isComplete: !this.state.isComplete });
+                }}
+              />
             </label>
           </div>
           <div
