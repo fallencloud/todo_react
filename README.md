@@ -12,3 +12,4 @@ A simple to do list made with React.
 6. Add Bootstrap to project
 7. Fix Bootstrap
 8. Add state
+9. Add delete functionality

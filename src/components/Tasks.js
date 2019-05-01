@@ -6,8 +6,18 @@ class Tasks extends Component {
     tasks: [
       { id: 1, desc: 'Go To Dentist', isComplete: true },
       { id: 2, desc: 'Do Gardening', isComplete: false },
-      { id: 1, desc: 'Renew Library Account', isComplete: false }
+      { id: 3, desc: 'Renew Library Account', isComplete: false }
     ]
+  };
+
+  deleteTask = id => {
+    const { tasks } = this.state;
+
+    const newTasks = tasks.filter(task => task.id !== id);
+
+    this.setState({
+      tasks: newTasks
+    });
   };
   render() {
     //destructuring the contacts
@@ -16,7 +26,11 @@ class Tasks extends Component {
     return (
       <div>
         {tasks.map(task => (
-          <ToDo key={task.id} task={task} />
+          <ToDo
+            key={task.id}
+            task={task}
+            deleteTaskHandler={this.deleteTask.bind(this, task.id)}
+          />
         ))}
       </div>
     );

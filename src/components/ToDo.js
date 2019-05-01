@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class ToDo extends Component {
+  onDeleteClick = () => {
+    this.props.deleteTaskHandler();
+  };
+
   render() {
     const { desc, isComplete } = this.props.task;
     return (
@@ -20,9 +24,10 @@ class ToDo extends Component {
             {desc}
           </div>
           <div className='col-md-1 col-xs-1 col-lg-1 col-sm-1 delete-icon-area'>
-            <a className='' href='/'>
-              <i className='delete-icon glyphicon glyphicon-trash' />
-            </a>
+            <i
+              onClick={this.onDeleteClick}
+              className='delete-icon glyphicon glyphicon-trash'
+            />
           </div>
         </div>
       </li>
