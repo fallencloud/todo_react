@@ -4,15 +4,6 @@ import ToDo from './ToDo';
 import { Consumer } from '../context';
 
 class Tasks extends Component {
-  deleteTask = id => {
-    const { tasks } = this.state;
-
-    const newTasks = tasks.filter(task => task.id !== id);
-
-    this.setState({
-      tasks: newTasks
-    });
-  };
   render() {
     return (
       <Consumer>
@@ -22,11 +13,7 @@ class Tasks extends Component {
           return (
             <>
               {tasks.map(task => (
-                <ToDo
-                  key={task.id}
-                  task={task}
-                  deleteTaskHandler={this.deleteTask.bind(this, task.id)}
-                />
+                <ToDo key={task.id} task={task} />
               ))}
             </>
           );

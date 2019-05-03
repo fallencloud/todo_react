@@ -15,3 +15,4 @@ A simple to do list made with React.
 9. Add delete functionality
 10. Added check complete functionality
 11. Add Context API and display state from Context
+12. Add reducer and handle delete task
