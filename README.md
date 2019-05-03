@@ -14,3 +14,4 @@ A simple to do list made with React.
 8. Add state
 9. Add delete functionality
 10. Added check complete functionality
+11. Add Context API and display state from Context
