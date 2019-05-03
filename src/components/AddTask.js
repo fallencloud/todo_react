@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Consumer } from '../context';
+import uuid from 'uuid';
 
 class AddTask extends Component {
   state = {
@@ -9,32 +11,52 @@ class AddTask extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  onSubmit = e => {
+  onSubmit = (dispatch, e) => {
     e.preventDefault();
-    console.log(this.state);
+    const { task } = this.state;
+
+    //get form value
+    const newTask = {
+      id: uuid(),
+      desc: task
+    };
+
+    dispatch({ type: 'ADD_TASK', payload: newTask });
+
+    //clear form
+    this.setState({
+      task: ''
+    });
   };
 
   render() {
     const { task } = this.state;
     return (
-      <div className='row input-area'>
-        <form onSubmit={this.onSubmit}>
-          <div className='form-group col-md-9'>
-            <h2>Add Task</h2>
-            <input
-              type='text'
-              name='task'
-              placeholder='New Task'
-              className='form-control'
-              value={task}
-              onChange={this.onChange}
-            />
-          </div>
-          <div className='form-group col-md-1'>
-            <button className='btn btn-primary'>Add</button>
-          </div>
-        </form>
-      </div>
+      <Consumer>
+        {value => {
+          const { dispatch } = value;
+          return (
+            <div className='row input-area'>
+              <form onSubmit={this.onSubmit.bind(this, dispatch)}>
+                <div className='form-group col-md-9'>
+                  <h2>Add Task</h2>
+                  <input
+                    type='text'
+                    name='task'
+                    placeholder='New Task'
+                    className='form-control'
+                    value={task}
+                    onChange={this.onChange}
+                  />
+                </div>
+                <div className='form-group col-md-1'>
+                  <button className='btn btn-primary'>Add</button>
+                </div>
+              </form>
+            </div>
+          );
+        }}
+      </Consumer>
     );
   }
 }

@@ -18,3 +18,4 @@ A simple to do list made with React.
 12. Add reducer and handle delete task
 13. Add 'Add Task' form
 14. Add form state
+15. Create add task functionality
