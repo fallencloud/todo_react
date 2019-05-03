@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Nav from './components/Nav';
 import Tasks from './components/Tasks';
+import AddTask from './components/AddTask';
 
 //allows for context
 import { Provider } from './context';
@@ -17,6 +18,7 @@ class App extends Component {
           <div className='container'>
             <div className='content-area row' />
             <div className='col-8'>
+              <AddTask />
               <ul>
                 <Tasks />
               </ul>
