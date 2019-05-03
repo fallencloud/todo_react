@@ -4,24 +4,36 @@ class AddTask extends Component {
   state = {
     task: ''
   };
+
+  onChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  onSubmit = e => {
+    e.preventDefault();
+    console.log(this.state);
+  };
+
   render() {
     const { task } = this.state;
     return (
-      <div class='row input-area'>
-        <div class='col-md-1' />
-        <div class='form-group col-md-9'>
-          <h2>Add Task</h2>
-          <input
-            type='text'
-            placeholder='New Task'
-            class='form-control'
-            value={task}
-          />
-        </div>
-        <div class='form-group col-md-1'>
-          <button class='btn btn-primary'>Add</button>
-        </div>
-        <div class='col-md-1' />
+      <div className='row input-area'>
+        <form onSubmit={this.onSubmit}>
+          <div className='form-group col-md-9'>
+            <h2>Add Task</h2>
+            <input
+              type='text'
+              name='task'
+              placeholder='New Task'
+              className='form-control'
+              value={task}
+              onChange={this.onChange}
+            />
+          </div>
+          <div className='form-group col-md-1'>
+            <button className='btn btn-primary'>Add</button>
+          </div>
+        </form>
       </div>
     );
   }
