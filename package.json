@@ -6,14 +6,17 @@
     "node": "10.5.0"
   },
   "private": true,
+  "homepage": "https://fallencloud.github.io/todo_react",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0",
     "uuid": "^3.3.2"
   },
   "scripts": {
+    "deploy": "npm run build&&gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
