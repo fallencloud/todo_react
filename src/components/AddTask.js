@@ -38,19 +38,23 @@ class AddTask extends Component {
           return (
             <div className='row input-area'>
               <form onSubmit={this.onSubmit.bind(this, dispatch)}>
-                <div className='form-group col-md-9'>
-                  <h2>Add Task</h2>
-                  <input
-                    type='text'
-                    name='task'
-                    placeholder='New Task'
-                    className='form-control'
-                    value={task}
-                    onChange={this.onChange}
-                  />
+                <div className='row'>
+                  <div className='form-group col-md-9 col-md-offset-2'>
+                    <h2>Add Task</h2>
+                    <input
+                      type='text'
+                      name='task'
+                      placeholder='New Task'
+                      className='form-control'
+                      value={task}
+                      onChange={this.onChange}
+                    />
+                  </div>
                 </div>
-                <div className='form-group col-md-1'>
-                  <button className='btn btn-primary'>Add</button>
+                <div className='row'>
+                  <div className='form-group col-md-1 col-md-offset-2'>
+                    <button className='btn btn-primary'>Add</button>
+                  </div>
                 </div>
               </form>
             </div>

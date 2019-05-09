@@ -6,8 +6,8 @@ const Nav = props => {
   return (
     <nav className='navbar navbar-inverse navbar-fixed-top'>
       <div className='container'>
-        <div className='navbar-header'>
-          <a className='navbar-brand' href='/'>
+        <div className='navbar-header m-auto'>
+          <a className='navbar-brand text-center' href='/'>
             {branding}
           </a>
         </div>
