@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/todo_react/static/css/main.5547a834.chunk.css",
+    "main.js": "/todo_react/static/js/main.6bb99646.chunk.js",
+    "main.js.map": "/todo_react/static/js/main.6bb99646.chunk.js.map",
+    "runtime~main.js": "/todo_react/static/js/runtime~main.8f972959.js",
+    "runtime~main.js.map": "/todo_react/static/js/runtime~main.8f972959.js.map",
+    "static/css/2.058a5f6b.chunk.css": "/todo_react/static/css/2.058a5f6b.chunk.css",
+    "static/js/2.0edd2673.chunk.js": "/todo_react/static/js/2.0edd2673.chunk.js",
+    "static/js/2.0edd2673.chunk.js.map": "/todo_react/static/js/2.0edd2673.chunk.js.map",
+    "index.html": "/todo_react/index.html",
+    "precache-manifest.ccbdcb285cfa093aaa0027543c2435b2.js": "/todo_react/precache-manifest.ccbdcb285cfa093aaa0027543c2435b2.js",
+    "service-worker.js": "/todo_react/service-worker.js",
+    "static/css/2.058a5f6b.chunk.css.map": "/todo_react/static/css/2.058a5f6b.chunk.css.map",
+    "static/css/main.5547a834.chunk.css.map": "/todo_react/static/css/main.5547a834.chunk.css.map",
+    "static/media/bootstrap.min.css": "/todo_react/static/media/glyphicons-halflings-regular.fa277232.woff"
+  }
+}
